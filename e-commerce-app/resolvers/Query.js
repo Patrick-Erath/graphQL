@@ -1,9 +1,35 @@
-const { reviews } = require("../src/db")
+const ratingValues = [1,2,3,4,5]
 
 exports.Query = {
-    products: (parent, args, {products}) => {
-        return products
+    products: (parent, { filter }, {products, reviews}) => {
+        let filteredProducts = products;
+        
+        if(filter){
+            const { onSale, averageRating } = filter;
+            if(onSale !== undefined){
+                filteredProducts = filteredProducts.filter((product) => {
+                    return product.onSale === onSale
+                })
+            }
+            if(ratingValues.includes(averageRating)){
+                filteredProducts = filteredProducts.filter((product) => {
+                    let sumRating = 0;
+                    let numberOfReviews = 0;
+                    reviews.forEach(review => {
+                        if(review.productId === product.id) {
+                            sumRating += review.rating
+                            numberOfReviews++;
+                        }
+                    });
+                    const avgProductRating = sumRating / numberOfReviews
+                    return avgProductRating >= averageRating
+                })
+            }
+        }
+
+        return filteredProducts
     },
+
     product: (parent, {id}, {products}) => {
         return products.find(product => product.id === id)
     },
@@ -19,4 +45,8 @@ exports.Query = {
     review: (parent, {id}, {reviews}) => {
         return reviews.find(review => review.id === id)
     } 
+}
+
+function averageRating(){
+
 }
