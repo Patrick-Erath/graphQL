@@ -1,20 +1,24 @@
 # node-red-home
-[![platform](https://img.shields.io/badge/platform-GraphQL)](https://nodered.org)
 ![NPM version](https://badge.fury.io/js/node-red-dashboard.svg)
 ![NPM](https://img.shields.io/npm/l/node-red-dashboard)
 
- ## This repository stores the Node-Red flows for the home page and Menus for the "Kitchens of the World project"
- 
- ### Pre-Requisites: Prequisities for this code are the following:
-* [Node-RED](https://nodered.org) to be installed.
-* [node-red-dashboard](https://flows.nodered.org/node/node-red-dashboard) to be installed.
-* [node-red-twitter](https://flows.nodered.org/node/node-red-node-twitter) to be installed.
-* [node-red-contrib-huemagic](https://flows.nodered.org/node/node-red-contrib-huemagic) to be installed.
+ ## This repository stores a few personal GraphQL Projects
 
-
-### To run this code, do the following:
+### To download the repository and run the different apps, do the following:
  
 Step 1. clone the repository into your local machine 
 ```
-git clone https://github.com/Patrick-Erath/node-red.git
+git clone https://github.com/Patrick-Erath/graphQL.git
+```
+Step 2. cd into the respective app you wish to run
+```
+cd {app-name}
+```
+Step 3. Download dependencies
+```
+npm install
+```
+Step 4. Run
+```
+npm start dev
 ```
