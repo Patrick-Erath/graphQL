@@ -1,5 +1,5 @@
 # node-red-home
-[![platform](https://img.shields.io/badge/platform-Node--RED-red)](https://nodered.org)
+[![platform](https://img.shields.io/badge/platform-GraphQL)](https://nodered.org)
 ![NPM version](https://badge.fury.io/js/node-red-dashboard.svg)
 ![NPM](https://img.shields.io/npm/l/node-red-dashboard)
 
