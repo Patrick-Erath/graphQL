@@ -1,4 +1,4 @@
-# node-red-home
+# GraphQL Mini-Projects
 ![NPM version](https://badge.fury.io/js/node-red-dashboard.svg)
 ![NPM](https://img.shields.io/npm/l/node-red-dashboard)
 
